@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadgetCase Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ===== TOP MENU ===== */
+        .top-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 15px 25px;
+            z-index: 1000;
+            border-bottom-left-radius: 12px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-menu a {
+            color: #333;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .top-menu a:hover {
+            background: rgba(30, 136, 229, 0.15);
+        }
+
+        .top-menu a.active {
+            background: #e3f2fd;
+            transform: scale(1.1);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: #1e88e5;
+            color: white;
+            text-align: center;
+            padding: 120px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            background: #ff9800;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* ===== SECTION ===== */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .problem {
+            background: #f4f4f4;
+        }
+
+        /* ===== CARD LIST ===== */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background: white;
+            width: 220px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: #e3f2fd;
+            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.35);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            background: #1e88e5;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: #ff9800;
+            color: white;
+        }
+
+        .cta button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #ff9800;
+            cursor: pointer;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="top-menu">
+        <a href="#problem">Permasalahan</a>
+        <a href="#features">Fitur</a>
+        <a href="#produk">Produk</a>
+        <a href="#cta">Pesan</a>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Lindungi & Lengkapi Gadget Anda</h1>
+        <p>Case HP dan aksesoris gadget berkualitas, kompatibel, dan harga terjangkau</p>
+        <button onclick="document.getElementById('cta').scrollIntoView()">Belanja Sekarang</button>
+    </header>
+
+    <!-- PROBLEM -->
+    <section class="problem" id="problem">
+        <h2>Permasalahan</h2>
+        <p>
+            Banyak pengguna gadget kesulitan menemukan aksesoris berkualitas.
+            Produk palsu dan informasi minim membuat pembelian online berisiko.
+        </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <h2>Solusi & Fitur Unggulan</h2>
+        <div class="product-list">
+            <div class="product-card">Produk Original & Berkualitas</div>
+            <div class="product-card">Kompatibel Semua Merek</div>
+            <div class="product-card">Harga Transparan</div>
+            <div class="product-card">Deskripsi Produk Lengkap</div>
+            <div class="product-card">Pengiriman Cepat</div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="produk">
+        <h2>Daftar Produk</h2>
+        <div class="product-list">
+            <div class="product-card">
+                <img src="images/case.jpg" alt="Case HP">
+                Case HP
+                <button>Beli</button>
+            </div>
+            <div class="product-card">
+                <img src="images/charger.jpg" alt="Charger">
+                Charger
+                <button>Beli</button>
+            </div>
+            <div class="product-card">
+                <img src="images/earphone.jpg" alt="Earphone">
+                Earphone
+                <button>Beli</button>
+            </div>
+            <div class="product-card">
+                <img src="images/tempered.jpg" alt="Tempered Glass">
+                Tempered Glass
+                <button>Beli</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="cta">
+        <h2>Mulai Belanja Sekarang</h2>
+        <p>Dapatkan aksesoris gadget terbaik untuk kebutuhan Anda</p>
+        <button>Pesan Sekarang</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 GadgetCase Store</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuLinks = document.querySelectorAll(".top-menu a");
+
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    menuLinks.forEach(l => l.classList.remove("active"));
+                    this.classList.add("active");
+
+                    setTimeout(() => {
+                        this.classList.remove("active");
+                    }, 400);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
