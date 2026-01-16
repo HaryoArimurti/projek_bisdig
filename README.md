@@ -1,4 +1,4 @@
-![alt text] (https://github.com/HaryoArimurti/projek_bisdig/blob/main/earphone.jpg?raw=true)
+![alt text] (https://github.com/HaryoArimurti/projek_bisdig/blob/main/charger.jpg?raw=true)
 
 # projek_bisdig
 TugasBesarBisdig
